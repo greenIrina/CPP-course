@@ -5,7 +5,8 @@ Added only interesting, a bit useful or just meaningful tasks. Full descriptions
 
 ## Homework 3
 I have spent too much time doing this just to leave it unposted.
-Write Makefile that creates static and dynamic libraries.
+
+Write Makefile that creates static and dynamic libraries. HW3 is based on HW2.
 
 ## Homework 5
 Create methods resize, getline and swap_min.
