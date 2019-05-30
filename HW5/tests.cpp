@@ -20,7 +20,7 @@ void print(int** a, int n, int m)
 
 void testSwapMin(int testCount)
 {
-    std::cout << "~~~START TEST~~~\n\n";
+    std::cout << "~~~ START TEST ~~~\n\n";
     for (int cnt = 0; cnt < testCount; ++cnt)
     {
         int n = rand() % RAND_SIZE;
@@ -54,13 +54,18 @@ void testSwapMin(int testCount)
         std::cout << "After\n";
         print(a, n, m);
         std::cout << "~~~\n";
+        for (int i = 0; i < n; ++i)
+        {
+            delete[] a[i];
+        }
+        delete[] a;
     }
-    std::cout << "\n\n~~~END~~~\n\n";
+    std::cout << "\n\n~~~ END ~~~\n\n";
 }
 
 void testResize(int testCount)
 {
-    std::cout << "~~~START TEST~~~\n\n";
+    std::cout << "~~~ START TEST ~~~\n\n";
     int passedTestsCount = 0;
     int currTestSize = 10;
     for (int i = 0; i < testCount; ++i)
@@ -93,5 +98,5 @@ void testResize(int testCount)
     }
     std::cout << "Finished testing. Passed: " << passedTestsCount << " tests out of " <<
               passedTestsCount << ".\n\n";
-    std::cout << "~~~END~~~\n\n";
+    std::cout << "~~~ END ~~~\n\n";
 }
