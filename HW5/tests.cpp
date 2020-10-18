@@ -20,11 +20,11 @@ void print(int** a, int n, int m)
 
 void testSwapMin(int testCount)
 {
-    std::cout << "~~~ START TEST ~~~\n\n";
+    std::cout << "~~~ START TEST SWAP MIN ~~~\n\n";
     for (int cnt = 0; cnt < testCount; ++cnt)
     {
-        int n = rand() % RAND_SIZE;
-        int m = rand() % RAND_SIZE;
+        int n = rand() % RAND_SIZE + 1;
+        int m = rand() % RAND_SIZE + 1;
         int** a = new int* [n];
         for (int i = 0; i < n; i++)
         {
@@ -39,7 +39,7 @@ void testSwapMin(int testCount)
                 a[i][j] = x - y;
             }
         }
-        std::cout << "Before\n";
+        std::cout << "Before swapping\n";
         print(a, n, m);
         int minVal = RAND_SIZE;
         for (int i = 0; i < n; ++i)
@@ -51,9 +51,9 @@ void testSwapMin(int testCount)
         }
         swap_min(a, n, m);
         std::cout << "The min num is: " << minVal << '\n';
-        std::cout << "After\n";
+        std::cout << "After swapping\n";
         print(a, n, m);
-        std::cout << "~~~\n";
+        std::cout << "\n~~~\n";
         for (int i = 0; i < n; ++i)
         {
             delete[] a[i];
@@ -65,7 +65,7 @@ void testSwapMin(int testCount)
 
 void testResize(int testCount)
 {
-    std::cout << "~~~ START TEST ~~~\n\n";
+    std::cout << "~~~ START TEST RESIZE ~~~\n\n";
     int passedTestsCount = 0;
     int currTestSize = 10;
     for (int i = 0; i < testCount; ++i)
@@ -96,7 +96,7 @@ void testResize(int testCount)
         ++currTestSize;
         ++passedTestsCount;
     }
-    std::cout << "Finished testing. Passed: " << passedTestsCount << " tests out of " <<
+    std::cout << "Finished testing resize. Passed: " << passedTestsCount << " tests out of " <<
               passedTestsCount << ".\n\n";
     std::cout << "~~~ END ~~~\n\n";
 }
