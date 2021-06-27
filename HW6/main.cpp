@@ -15,7 +15,6 @@ int main()
     String s2('k', 4);
     char* p = const_cast<char*>("hello");
     String s3(p);
-    delete[] p;
 
     cout << "s1 = " << s1 << ", s2 = " << s2 << ", s3 = " << s3 << endl;
 
